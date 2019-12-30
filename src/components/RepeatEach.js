@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const RepeatEach = () => {
   const Section = styled.section`
-    border: 1px red solid;
     width: 375px;
     height: 50px;
     margin: auto;

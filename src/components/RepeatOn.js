@@ -6,7 +6,6 @@ const RepeatOn = () => {
   const context = useContext(DayContext);
 
   const Section = styled.section`
-    border: 1px red solid;
     width: 375px;
     height: 70px;
     margin: auto;
@@ -21,7 +20,6 @@ const RepeatOn = () => {
   `;
 
   const CircleContainer = styled.div`
-    border: 1px red solid;
     width: 350px;
     height: 25px;
     margin-left: 20px;
