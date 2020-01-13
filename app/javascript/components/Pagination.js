@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Pagination = ({ ArticlesPerPage, totalArticles, paginate }) => {
+const Pagination = ({ articlesPerPage, totalArticles, paginate }) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalArticles / ArticlesPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalArticles / articlesPerPage); i++) {
     pageNumbers.push(i);
-  
+  }
 
   return (
     <nav>

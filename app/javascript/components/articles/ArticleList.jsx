@@ -7,7 +7,7 @@ import Pagination from '../Pagination';
 function ArticleList(props) {
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [articlesPerPage] = useState(3);
+  const Articles_Per_Page = 3; //cambiar a mayusculas pasar comoparametros a la api 
 
   useEffect(() => { 
     props.listArticles();
@@ -31,10 +31,10 @@ function ArticleList(props) {
               <hr/>
             </div>
           );
-        }
+        })
       }
     <Pagination 
-     ArticlesPerPage={articlesPerPage}
+     articlesPerPage={Articles_Per_Page}
      totalArticles={props.articles.length}
      paginate={paginate}
     />

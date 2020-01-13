@@ -10,6 +10,7 @@ class ArticlesApi {
       .catch(error => {
         return error;
       });
+
   }
 
   static getArticle(id){
