@@ -1,1 +1,1 @@
-# React
+https://www.techandstartup.com/tutorials/rails-webpacker-react
