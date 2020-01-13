@@ -7,15 +7,15 @@ import Pagination from '../Pagination';
 function ArticleList(props) {
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(3);
+  const [articlesPerPage] = useState(3);
 
   useEffect(() => { 
     props.listArticles();
   },[]);
 
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  //const currentPosts = props.articles.slice(indexOfFirstPost, indexOfLastPost);
+  const indexOfLastArticle = currentPage * articlesPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+  const currentArticles = props.articles.slice(indexOfFirstArticle, indexOfLastArticle);
 
   const paginate = pageNumber => setCurrentPage(pageNumber);
                                                                       
@@ -23,7 +23,7 @@ function ArticleList(props) {
   return (
     <div>
       {
-        props.articles.slice(indexOfFirstPost, indexOfLastPost).map((article) => {
+        currentArticles.map((article) => {
           return(
             <div key={article.id}>
               <h2><Link to={`/articles/${article.id}`}>{article.title}</Link></h2>
@@ -34,8 +34,8 @@ function ArticleList(props) {
         })
       }
     <Pagination 
-     postsPerPage={postsPerPage}
-     totalPosts={props.articles.length}
+     ArticlesPerPage={articlesPerPage}
+     totalArticles={props.articles.length}
      paginate={paginate}
     />
     <Link to="/articles/new" className="btn btn-outline-primary">Create Article</Link> 
