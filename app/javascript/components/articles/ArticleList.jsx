@@ -31,7 +31,7 @@ function ArticleList(props) {
               <hr/>
             </div>
           );
-        })
+        }
       }
     <Pagination 
      ArticlesPerPage={articlesPerPage}

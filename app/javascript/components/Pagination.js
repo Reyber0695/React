@@ -5,7 +5,7 @@ const Pagination = ({ ArticlesPerPage, totalArticles, paginate }) => {
 
   for (let i = 1; i <= Math.ceil(totalArticles / ArticlesPerPage); i++) {
     pageNumbers.push(i);
-  }
+  
 
   return (
     <nav>
